@@ -23,6 +23,14 @@ app.get('/',(req,res)=>{
   res.render('home',{homek:homeStartingContent});
 })
 
+app.get('/contact',(req,res)=>{
+  res.render('contact',{contactk:contactContent});
+})
+
+app.get('/about',(req,res)=>{
+  res.render('about',{aboutk:aboutContent});
+})
+
 
 
 
