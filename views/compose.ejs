@@ -2,9 +2,26 @@
 
 <h1>Compose</h1>
 
-<form action="/compose" method="POST">
+<!-- <form action="/compose" method="POST">
     <input type="text" name="title">
     <button type="submit">Publish</button>
-</form>
+</form> -->
+
+<form action="/compose" method="POST">
+    <div class="mb-3">
+      <label for="text" class="form-label">Title</label>
+      <input type="text" class="form-control" id="text" aria-describedby="emailHelp" name="title">
+     
+    </div>
+    <div class="mb-3">
+      <label for="post" class="form-label">Post</label>
+      <br>
+      <textarea name="post" id="post" cols="155" rows="10"></textarea>
+    </div>
+    <br>
+    
+     
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 
 <%- include('./__partials/footer') -%>
