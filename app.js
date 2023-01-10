@@ -49,9 +49,7 @@ app.post('/compose',(req,res)=>{
 
      
 })
-app.get('/post',(req,res)=>{
-    res.render('post',{postk : postPage})
-})
+
 
 
 app.get('/posts/:postName',(req,res)=>{
@@ -62,9 +60,10 @@ app.get('/posts/:postName',(req,res)=>{
      
          if(postTitle === reqTitle ){
            postPage=post;
-           res.redirect('/post')
-         }else{
-          console.log('not matched')
+           res.render('post',{
+            title : post.title,
+            postBody:post.postBody,
+           })
          }
     })
 })

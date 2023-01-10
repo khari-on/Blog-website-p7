@@ -6,8 +6,11 @@
 
 <div>
   <% kpost.forEach((item)=>{ %>
-          <h1><%= item.title %></h1>
-          <p><%= item.postBody %></p>
+    <%   const {title,postBody}=item %>
+    <%    const post = postBody.substring(0,100)+ '...' %>
+
+          <h1><%= title %></h1>
+          <p><%= post %> <a href="/posts/:<%=title %> ">Read more</a></p>
          
    <% }) %>
 
