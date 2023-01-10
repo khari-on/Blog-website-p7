@@ -2,8 +2,16 @@
 <%- include('./__partials/header') -%>
 
 <h1>Home</h1>
-<p>
-    <%= homek %>
-</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dicta unde ipsam, nobis et hic iure adipisci corporis aliquam alias sint possimus perspiciatis officia reprehenderit voluptatem commodi iste doloribus ex</p>
+
+<div>
+  <% kpost.forEach((item)=>{ %>
+          <h1><%= item.title %></h1>
+          <p><%= item.postBody %></p>
+         
+   <% }) %>
+
+
+</div>
 
 <%- include('./__partials/footer') -%>
