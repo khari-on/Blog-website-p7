@@ -31,7 +31,14 @@ app.get('/about',(req,res)=>{
   res.render('about',{aboutk:aboutContent});
 })
 
+app.get('/compose',(req,res)=>{
+  res.render('compose');
+})
 
+app.post('/compose',(req,res)=>{
+     const title = req.body.title;
+     console.log(title);
+})
 
 
 
